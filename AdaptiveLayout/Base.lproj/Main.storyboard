@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdaptiveLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,115 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motobecane" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-mV-R5y">
+                                <rect key="frame" x="0.0" y="240" width="600" height="360"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ol2-FO-cmz" userLabel="DescriptionView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2010 Motobecane Grand Sprint" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PDT-Fx-eeo">
+                                        <rect key="frame" x="20" y="40" width="560" height="59"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focus" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-pa-2r2">
+                                        <rect key="frame" x="450" y="108" width="150" height="132"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="egd-eT-9OS"/>
+                                            <constraint firstAttribute="height" constant="132" id="xHd-9P-wyf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CLJ-Hk-t84">
+                                        <rect key="frame" x="20" y="119" width="560" height="89"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="PDT-Fx-eeo" firstAttribute="top" secondItem="Ol2-FO-cmz" secondAttribute="top" constant="40" id="8Vz-xA-E6p"/>
+                                    <constraint firstAttribute="trailing" secondItem="CLJ-Hk-t84" secondAttribute="trailing" constant="20" id="BhI-dc-c4N"/>
+                                    <constraint firstAttribute="bottom" secondItem="qpO-pa-2r2" secondAttribute="bottom" id="GgP-OZ-xIU"/>
+                                    <constraint firstAttribute="trailing" secondItem="qpO-pa-2r2" secondAttribute="trailing" id="Kky-X1-lXt"/>
+                                    <constraint firstItem="PDT-Fx-eeo" firstAttribute="leading" secondItem="Ol2-FO-cmz" secondAttribute="leading" constant="20" id="U9l-7y-Fwg"/>
+                                    <constraint firstAttribute="trailing" secondItem="PDT-Fx-eeo" secondAttribute="trailing" constant="20" id="g6T-AN-gHV"/>
+                                    <constraint firstItem="CLJ-Hk-t84" firstAttribute="top" secondItem="PDT-Fx-eeo" secondAttribute="bottom" constant="20" id="gBu-Ew-ddw"/>
+                                    <constraint firstItem="CLJ-Hk-t84" firstAttribute="leading" secondItem="Ol2-FO-cmz" secondAttribute="leading" constant="20" id="kd0-VC-nQ1"/>
+                                </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="subviews">
+                                        <exclude reference="qpO-pa-2r2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <exclude reference="qpO-pa-2r2"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ol2-FO-cmz" firstAttribute="leading" secondItem="gTc-mV-R5y" secondAttribute="trailing" id="4XL-YJ-9aK">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="Ol2-FO-cmz" secondAttribute="trailing" id="6Rj-Mj-WA3"/>
+                            <constraint firstAttribute="trailing" secondItem="gTc-mV-R5y" secondAttribute="trailing" id="ANB-Ni-cNi"/>
+                            <constraint firstItem="gTc-mV-R5y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EWT-7c-6wc"/>
+                            <constraint firstItem="Ol2-FO-cmz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="KVV-NN-548"/>
+                            <constraint firstItem="Ol2-FO-cmz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kts-hU-lV7"/>
+                            <constraint firstItem="gTc-mV-R5y" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="LYO-P4-JyA"/>
+                            <constraint firstItem="gTc-mV-R5y" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Nfd-Tw-KFC"/>
+                            <constraint firstAttribute="bottom" secondItem="gTc-mV-R5y" secondAttribute="bottom" id="Ra3-dt-IEh"/>
+                            <constraint firstItem="gTc-mV-R5y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ZDE-4a-mKK"/>
+                            <constraint firstAttribute="bottom" secondItem="Ol2-FO-cmz" secondAttribute="bottom" id="hWD-Wy-P2K"/>
+                            <constraint firstItem="Ol2-FO-cmz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iJV-Ke-5wn"/>
+                            <constraint firstItem="gTc-mV-R5y" firstAttribute="top" secondItem="Ol2-FO-cmz" secondAttribute="bottom" id="oRw-03-vBA"/>
+                            <constraint firstItem="gTc-mV-R5y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qj7-Xq-mo7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4XL-YJ-9aK"/>
+                                <exclude reference="hWD-Wy-P2K"/>
+                                <exclude reference="LYO-P4-JyA"/>
+                                <exclude reference="Nfd-Tw-KFC"/>
+                                <exclude reference="ZDE-4a-mKK"/>
+                                <exclude reference="qj7-Xq-mo7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="4XL-YJ-9aK"/>
+                                <exclude reference="KVV-NN-548"/>
+                                <include reference="hWD-Wy-P2K"/>
+                                <exclude reference="iJV-Ke-5wn"/>
+                                <exclude reference="ANB-Ni-cNi"/>
+                                <include reference="LYO-P4-JyA"/>
+                                <exclude reference="Nfd-Tw-KFC"/>
+                                <include reference="ZDE-4a-mKK"/>
+                                <exclude reference="oRw-03-vBA"/>
+                                <include reference="qj7-Xq-mo7"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="focus" width="300" height="265"/>
+        <image name="motobecane" width="300" height="178"/>
+    </resources>
 </document>
